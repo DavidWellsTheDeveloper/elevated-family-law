@@ -1,0 +1,29 @@
+# Sensitive credentials
+LightsailDefaultKey-us-west-2.pem
+brevo-api-key.txt
+
+# Large media assets
+*.mp4
+*.mov
+*.avi
+*.mp3
+*.wav
+
+# WordPress uploads / generated media (if synced)
+wp-content/uploads/
+
+# LibreOffice / OS locks
+.~lock.*
+.DS_Store
+Thumbs.db
+
+# IDE / editor files
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Node / build artifacts
+node_modules/
+dist/
+build/
