@@ -4,7 +4,196 @@ Theme URI: https://elevatedfamilylaw.focowebsites.com
 GitHub Theme URI: DavidWellsTheDeveloper/elevated-family-law
 Primary Branch: master
 Template: twentyseventeen
-Version: 1.0.0
+Version: 1.0.1
 Description: Custom child theme for Elevated Family Law.
 Author: FoCo Websites
 */
+
+/* Load the heading font */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap');
+
+/* Root variables */
+:root {
+  --efl-bg: #F6F8F8;
+  --efl-primary: #A9D6D6;
+  --efl-secondary: #BDCEDB;
+  --efl-tertiary: #B7D7CA;
+  --efl-deep: #5EBABA;
+  --efl-body: #323E3E;
+  --efl-heading: #283333;
+}
+
+/* Base page */
+body {
+  background-color: var(--efl-bg);
+  color: var(--efl-body);
+  font-family: 'Inter', 'Libre Franklin', sans-serif;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6,
+.site-title,
+.entry-title,
+.page-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  color: var(--efl-heading);
+  font-weight: 500;
+}
+
+/* Links */
+a {
+  color: var(--efl-deep);
+}
+
+a:hover,
+a:focus {
+  color: #4A9E9E;
+}
+
+/* Buttons */
+button,
+input[type="button"],
+input[type="submit"],
+.wp-block-button__link {
+  background-color: var(--efl-deep);
+  color: #ffffff;
+  border-radius: 4px;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover,
+.wp-block-button__link:hover {
+  background-color: #4A9E9E;
+}
+
+/* Navigation */
+.main-navigation a {
+  color: var(--efl-body);
+}
+
+.main-navigation a:hover {
+  color: var(--efl-deep);
+}
+
+/* Home page services animation */
+.efl-service-row {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 1.5rem 2rem;
+  max-width: 800px;
+  margin: 0 auto 1.5rem;
+  box-shadow: 0 2px 8px rgba(40,51,51,0.06);
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.efl-service-row.efl-left {
+  border-left: 5px solid #5EBABA;
+  transform: translateX(-50px);
+}
+
+.efl-service-row.efl-right {
+  border-right: 5px solid #BDCEDB;
+  transform: translateX(50px);
+}
+
+.efl-service-row.in-view {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.efl-service-row h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #283333;
+}
+
+.efl-service-row p {
+  margin-bottom: 0;
+}
+
+/* Hero section */
+.efl-hero {
+  text-align: center;
+  padding: 2rem 1rem 3rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.efl-hero h1 {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+  color: #283333;
+}
+
+.efl-lead,
+.efl-subtitle {
+  font-size: 1.15rem;
+  color: #323E3E;
+  line-height: 1.6;
+}
+
+.efl-button {
+  display: inline-block;
+  background: #5EBABA;
+  color: #ffffff;
+  padding: 0.85rem 1.75rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.efl-button:hover {
+  background: #4A9E9E;
+  color: #ffffff;
+}
+
+/* Services CTA */
+.efl-services-cta {
+  text-align: center;
+  margin: 2rem 0 3rem;
+}
+
+/* About page placeholder photo */
+.efl-photo-placeholder {
+  background: #E8F0F0;
+  border: 2px dashed #A9D6D6;
+  border-radius: 8px;
+  min-height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #5EBABA;
+  font-weight: 600;
+  padding: 1rem;
+}
+
+/* Footer testimonials carousel layout */
+.site-footer .wrap {
+  max-width: 1000px;
+}
+
+.footer-widget-1,
+.site-footer .widget-column.footer-widget-1 {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  float: none;
+  text-align: center;
+}
+
+.efl-reviews-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  color: #283333;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 600px) {
+  .efl-hero h1 {
+    font-size: 1.8rem;
+  }
+}
