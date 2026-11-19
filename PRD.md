@@ -355,5 +355,4 @@ Discuss with the client whether they want to migrate/repurpose this content into
 | 2026-11-11 | OpenCode | Confirmed decision: use Web3Forms for the consultation form. |
 | 2026-11-11 | OpenCode | Set consultation form recipients to info@elevatedfamilylaw.com and kaia@elevatedfamilylaw.com. |
 | 2026-11-11 | OpenCode | Documented current consultation form fields based on the live Contact Us page. |
-
 | 2026-11-19 | OpenCode | Blocked search engine indexing (noindex header + meta) via child theme; documented how to remove at domain cutover. |
