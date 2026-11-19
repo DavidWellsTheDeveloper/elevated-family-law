@@ -243,6 +243,20 @@ Because the initial consultation form is simple (a list of questions with fillab
 - **Static IP:** `32.185.210.182` attached to the Lightsail instance
 - **Admin access:** SSH via `make ssh` using `LightsailDefaultKey-us-west-2.pem`
 
+### Search Engine Indexing (Currently Blocked)
+
+While the site lives on the development domain, it is intentionally hidden from Google and other search engines:
+
+- `X-Robots-Tag: noindex, nofollow` HTTP header on every response
+- `<meta name="robots" content="noindex, nofollow">` in every page `<head>`
+- Implemented in the child theme: `elevated-family-law-child/functions.php` (block guarded by the `EFL_BLOCK_INDEXING` constant)
+
+**When moving to the permanent domain (e.g., `elevatedfamilylaw.com`):** remove this block from `functions.php` (or set `EFL_BLOCK_INDEXING` to `false`), then bump the theme `Version` in `style.css` and deploy. Afterwards:
+
+1. Confirm **Settings → Reading → "Discourage search engines from indexing this site"** is unchecked.
+2. Verify the header and meta tag are gone (`curl -sI <site> | grep -i x-robots`).
+3. Submit the sitemap in Google Search Console (Yoast SEO and Site Kit are already installed).
+
 ---
 
 ## Budget & Estimate
@@ -342,3 +356,4 @@ Discuss with the client whether they want to migrate/repurpose this content into
 | 2026-11-11 | OpenCode | Set consultation form recipients to info@elevatedfamilylaw.com and kaia@elevatedfamilylaw.com. |
 | 2026-11-11 | OpenCode | Documented current consultation form fields based on the live Contact Us page. |
 
+| 2026-11-19 | OpenCode | Blocked search engine indexing (noindex header + meta) via child theme; documented how to remove at domain cutover. |
