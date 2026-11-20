@@ -90,3 +90,6 @@ Source of truth after review is the WordPress page itself. The full Spanish text
 
 ## Added 2026-11-19: service page visual changes
 Key-fact callouts, new section headings, and pull quotes were added to the 5 service sub-pages (new Spanish text for review): see `changes/service-pages-visuals/CHANGELOG.md`. The reviewer should check the new Spanish key-fact lines and headings (for example "Qué se Considera Peligro Inminente", "Un Proceso de Dos Pasos").
+
+## Added 2026-11-19: privacy policy and legal disclaimer
+Spanish privacy policy (page 217), footer disclaimer, and contact-form notice are new Spanish text for review. The reviewer should check the legal wording ("relación abogado-cliente", "publicidad de abogados", "Aviso Legal"). The client should also approve the content. See `changes/legal-disclaimer/CHANGELOG.md`.

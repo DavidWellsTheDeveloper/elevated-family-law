@@ -309,7 +309,7 @@ Adapted from an earlier assessment. Not applicable here: WooCommerce/e-commerce 
 - [ ] Set up **GA4** (via Site Kit) with a conversion event for consultation form submissions. Add a cookie/privacy notice if required.
 - [ ] Create or claim listings: Avvo, Justia, FindLaw, Martindale, Yelp, state/local bar profile, and relevant local directories. Link each to the site.
 - [ ] Link the social profiles from the site and in schema `sameAs` (need the profile list from the client).
-- [ ] Add a Privacy Policy and attorney advertising disclaimer as required by the state bar (see Attorney Advertising Disclaimer section).
+- [x] Privacy Policy and attorney advertising disclaimer drafted and published (EN + ES). **Still to do: client approval.** See Attorney Advertising Disclaimer section.
 - [x] Reviews: real reviews are on the site. Optional: set up a process for collecting future Google reviews.
 
 #### G. Final cutover verification (blocked until the permanent domain is available)
@@ -328,7 +328,7 @@ Adapted from an earlier assessment. Not applicable here: WooCommerce/e-commerce 
 ## Spanish Language Support
 
 - **Plugin:** Polylang (free). Languages: English (default) and Spanish. English at `/`, Spanish at `/es/`.
-- **Pages:** every public page has a linked Spanish translation (home, about, contact, services and the five service sub-pages). Not translated: Dependency & Neglect (placeholder draft) and the Privacy Policy (draft).
+- **Pages:** every public page has a linked Spanish translation (home, about, contact, services and the five service sub-pages). Not translated: Dependency & Neglect (placeholder draft, per the client). The Privacy Policy and Legal Disclaimer are also translated (draft).
 - **Navigation:** separate menu per language, assigned to the Top Menu location in Polylang. A pill-styled language switcher is a menu item in each menu. Menus do not auto-add new pages; add new pages to the right menu manually.
 - **Contact form:** Spanish version with Spanish labels; field values and email subject stay English so staff can read notifications. It sends a hidden `preferred_language=Spanish` field and a subject marked "(SPANISH-speaking client)".
 - **Process:** Spanish text is drafted in `spanish-translations.md` (glossary and review notes), then applied to WordPress. A Spanish speaker reviews on the live site; **review is still pending**.
@@ -424,8 +424,8 @@ During research, a significant amount of real content was discovered on `https:/
 
 **Open: not blocked by the domain**
 1. **Spanish review:** a Spanish speaker needs to review all Spanish pages (see `spanish-translations.md` for the glossary and open choices, such as "tiempo de crianza" vs. "tiempo con los hijos" and the Spanish brand label "Elevated Derecho Familiar").
-2. **Privacy Policy:** the page is a draft with default WordPress text. Real text is needed.
-3. **Attorney advertising disclaimer:** see the section below; the client must confirm required wording.
+2. **Privacy Policy and attorney advertising disclaimer:** drafted in English and Spanish and published on the development site (footer disclaimer, `/privacy-policy/`, `/es/politica-de-privacidad/`, and a notice on the contact form). **TODO: check with the client (Michelle) that she approves the wording and facts before launch** (address, the "attorney advertising" label, testimonial language, services listed in the policy). Spanish text also needs the Spanish reviewer. See `changes/legal-disclaimer/CHANGELOG.md`.
+3. **Plugin cleanup affecting the privacy policy:** OptinMonster and WPForms Lite are active but may be unused (the form uses Web3Forms); remove them or add them to the policy. The WordPress admin email is still `user@example.com`.
 4. **SEO titles and meta descriptions** for all pages except Home (English and Spanish).
 5. **About page headshot and bio:** confirm with the client whether the placeholder photo area and text are final.
 6. **Form privacy and compliance:** confirm retention and confidentiality language for form submissions (Web3Forms stores submissions on a third-party service).
@@ -455,7 +455,7 @@ Typical items to include or check:
 7. **Spanish versions**: the disclaimer must also appear in Spanish, with the same meaning (to be reviewed by the Spanish speaker, ideally also by the attorney).
 8. **Optional label**: some states require the words "Attorney Advertising"; Colorado does not generally require this label, but the client may choose to include it.
 
-**Suggested implementation:** one short footer disclaimer on every page (EN and ES) with a link to a fuller "Legal Disclaimer" section on the Privacy Policy page, plus the form notice above. Needs the client's approval of the wording before it goes live.
+**Implemented (draft):** a short footer disclaimer on every page (EN and ES, below the FoCo Websites credit) with a link to the Privacy Policy & Legal Disclaimer page, a "Legal Disclaimer" section on that page, and the no-attorney-client-relationship notice above the consultation form's Submit button. **Needs the client's approval of the wording before launch.**
 
 ---
 
@@ -485,3 +485,4 @@ Typical items to include or check:
 | 2026-11-19 | OpenCode | Added six testimonials (three placeholders filled in by the client). |
 | 2026-11-19 | OpenCode | Applied visual improvements to service pages (key-fact callout, cards, pull quotes), tracked in `changes/`. |
 | 2026-11-19 | OpenCode | Updated scope/budget to about $1,000; marked reviews, inspiration links, and content migration resolved; added attorney advertising disclaimer guidance and domain-blocked items. |
+| 2026-11-19 | OpenCode | Drafted and published privacy policy / legal disclaimer (EN + ES), footer disclaimer, and contact form notice. Pending client approval. |

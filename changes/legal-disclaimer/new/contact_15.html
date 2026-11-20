@@ -1,0 +1,253 @@
+<!-- wp:html -->
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+.efl-consult-form {
+  font-family: 'Inter', sans-serif;
+  color: #323E3E;
+  background: #F6F8F8;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 760px;
+  margin: 0 auto;
+}
+.efl-consult-form h2 {
+  font-family: 'Cormorant Garamond', serif;
+  color: #283333;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.efl-consult-form p.lead {
+  margin-bottom: 1.5rem;
+  color: #323E3E;
+}
+.efl-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.efl-field {
+  margin-bottom: 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+.efl-field.full {
+  grid-column: 1 / -1;
+}
+.efl-field label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 0.4rem;
+}
+.efl-field input[type="text"],
+.efl-field input[type="email"],
+.efl-field input[type="tel"],
+.efl-field select,
+.efl-field textarea {
+  padding: 0.75rem;
+  border: 1px solid #A9D6D6;
+  border-radius: 4px;
+  background: #fff;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  color: #323E3E;
+}
+.efl-field input:focus,
+.efl-field select:focus,
+.efl-field textarea:focus {
+  outline: 2px solid #5EBABA;
+  border-color: #5EBABA;
+}
+.efl-field textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+.efl-checkgroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+}
+.efl-checkgroup label {
+  font-weight: 400;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  cursor: pointer;
+}
+.efl-checkgroup input {
+  accent-color: #5EBABA;
+  width: 1.1rem;
+  height: 1.1rem;
+}
+.efl-submit {
+  background: #5EBABA;
+  color: #fff;
+  border: none;
+  padding: 0.85rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.efl-submit:hover,
+.efl-submit:focus {
+  background: #323E3E;
+}
+.efl-result {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  border-radius: 4px;
+  display: none;
+}
+.efl-result.success {
+  display: block;
+  background: #B7D7CA;
+  color: #283333;
+}
+.efl-result.error {
+  display: block;
+  background: #f8d7da;
+  color: #721c24;
+}
+.efl-honeypot {
+  position: absolute;
+  left: -9999px;
+}
+@media (max-width: 600px) {
+  .efl-form-row {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+<div class="efl-consult-form">
+  <h2>Request a Consultation</h2>
+  <p class="lead">Fill out the form below and we will reach out to schedule your confidential consultation.</p>
+
+  <form id="efl-consult" action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="f60f6809-7c7d-409c-9c98-2d3cf0a1b298">
+    <input type="hidden" name="subject" value="New Family Law Consultation Request">
+    <input type="hidden" name="from_name" value="Elevated Family Law Website">
+    <input type="checkbox" name="botcheck" class="efl-honeypot" tabindex="-1" autocomplete="off">
+
+    <div class="efl-form-row">
+      <div class="efl-field">
+        <label for="efl-name">Name <span aria-label="required">*</span></label>
+        <input id="efl-name" type="text" name="name" placeholder="John Doe" required>
+      </div>
+      <div class="efl-field">
+        <label for="efl-phone">Phone <span aria-label="required">*</span></label>
+        <input id="efl-phone" type="tel" name="phone" placeholder="+1 (999) 999-9999" required>
+      </div>
+    </div>
+
+    <div class="efl-form-row">
+      <div class="efl-field">
+        <label for="efl-email">Email Address <span aria-label="required">*</span></label>
+        <input id="efl-email" type="email" name="email" placeholder="you@example.com" required>
+      </div>
+      <div class="efl-field">
+        <label for="efl-county">County / Jurisdiction</label>
+        <input id="efl-county" type="text" name="county_jurisdiction" placeholder="e.g., Denver County">
+      </div>
+    </div>
+
+    <div class="efl-field full">
+      <label>Best time to contact me</label>
+      <div class="efl-checkgroup">
+        <label><input type="checkbox" name="best_time[]" value="Morning"> Morning</label>
+        <label><input type="checkbox" name="best_time[]" value="Afternoon"> Afternoon</label>
+        <label><input type="checkbox" name="best_time[]" value="Evening"> Evening</label>
+      </div>
+    </div>
+
+    <div class="efl-field full">
+      <label>Days availability</label>
+      <div class="efl-checkgroup">
+        <label><input type="checkbox" name="days_availability[]" value="Monday"> Monday</label>
+        <label><input type="checkbox" name="days_availability[]" value="Tuesday"> Tuesday</label>
+        <label><input type="checkbox" name="days_availability[]" value="Wednesday"> Wednesday</label>
+        <label><input type="checkbox" name="days_availability[]" value="Thursday"> Thursday</label>
+        <label><input type="checkbox" name="days_availability[]" value="Friday"> Friday</label>
+        <label><input type="checkbox" name="days_availability[]" value="Saturday"> Saturday</label>
+        <label><input type="checkbox" name="days_availability[]" value="Sunday"> Sunday</label>
+      </div>
+    </div>
+
+    <div class="efl-field full">
+      <label for="efl-type">Type of Family Law Consultation</label>
+      <select id="efl-type" name="consultation_type">
+        <option value="">— Please select —</option>
+        <option value="Divorce / Separation">Divorce / Separation</option>
+        <option value="Child Custody / Parenting Time">Child Custody / Parenting Time</option>
+        <option value="Child Support">Child Support</option>
+        <option value="Spousal Support (Alimony)">Spousal Support (Alimony)</option>
+        <option value="Prenuptial / Postnuptial Agreement">Prenuptial / Postnuptial Agreement</option>
+        <option value="Domestic Violence / Protection Order">Domestic Violence / Protection Order</option>
+      </select>
+    </div>
+
+    <div class="efl-field full">
+      <label for="efl-message">Brief Description of Your Family Law Matter <span aria-label="required">*</span></label>
+      <textarea id="efl-message" name="message" placeholder="Please share a short summary..." required></textarea>
+    </div>
+
+    <p class="efl-form-note" style="font-size:0.85rem;color:#4d5a5a;margin:0 0 1rem;">Submitting this form does not create an attorney-client relationship. Please do not include confidential or sensitive details until we have agreed to represent you. See our <a href="/privacy-policy/">Privacy Policy</a>.</p>
+    <button type="submit" class="efl-submit">Submit</button>
+    <div id="efl-result" class="efl-result" role="status" aria-live="polite"></div>
+  </form>
+</div>
+
+<script>
+(function() {
+  const form = document.getElementById('efl-consult');
+  const result = document.getElementById('efl-result');
+  const submitBtn = form.querySelector('button[type="submit"]');
+  const originalText = submitBtn.textContent;
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    result.className = 'efl-result';
+    result.textContent = '';
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+
+    const formData = new FormData(form);
+    const object = {};
+    formData.forEach((value, key) => {
+      if (object[key]) {
+        if (!Array.isArray(object[key])) object[key] = [object[key]];
+        object[key].push(value);
+      } else {
+        object[key] = value;
+      }
+    });
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(object)
+    })
+    .then(async response => {
+      const json = await response.json();
+      if (response.status === 200) {
+        result.className = 'efl-result success';
+        result.textContent = 'Thank you. Your consultation request has been received and we will follow up soon.';
+        form.reset();
+      } else {
+        throw new Error(json.message || 'Something went wrong. Please try again.');
+      }
+    })
+    .catch(error => {
+      result.className = 'efl-result error';
+      result.textContent = error.message;
+    })
+    .finally(() => {
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalText;
+    });
+  });
+})();
+</script>
+<!-- /wp:html -->
+
