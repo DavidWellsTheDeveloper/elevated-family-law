@@ -1,7 +1,7 @@
 # Builds Privacy Policy / Legal Disclaimer pages (EN + ES) and the contact-form notice.
 # DRAFT text: must be reviewed by the client (and Spanish reviewer) before launch.
 import re,html,os
-ADDR_EN="2625 Redwing Road, Suite 205, Fort Collins, Colorado 80526"
+ADDR_EN="19 Old Town Square, Fort Collins, CO 80524"
 def blk(items):
     o=[]
     for k,v in items:

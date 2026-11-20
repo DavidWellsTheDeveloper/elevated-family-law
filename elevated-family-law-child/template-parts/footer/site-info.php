@@ -43,6 +43,6 @@ if ( $efl_is_es ) {
 		<?php if ( $efl_pp_id && 'publish' === get_post_status( $efl_pp_id ) ) : ?>
 			<a href="<?php echo esc_url( get_permalink( $efl_pp_id ) ); ?>"><?php echo wp_kses_post( $efl_disclaimer_link ); ?></a>.
 		<?php endif; ?>
-		<br>Elevated Family Law, LLC &middot; 2625 Redwing Road, Suite 205, Fort Collins, Colorado 80526
+		<br>Elevated Family Law, LLC &middot; 19 Old Town Square, Fort Collins, CO 80524
 	</p>
 </div><!-- .efl-footer-disclaimer -->

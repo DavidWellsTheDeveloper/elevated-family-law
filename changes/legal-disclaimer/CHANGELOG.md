@@ -10,7 +10,7 @@
 
 ## Facts used in the drafts (confirm with the client)
 
-- Address: 2625 Redwing Road, Suite 205, Fort Collins, Colorado 80526 (taken from the old site's contact page content).
+- Address: 19 Old Town Square, Fort Collins, CO 80524 (updated by the client; the first draft used the old site's 2625 Redwing Road address).
 - Phone (970) 797-4757, email info@elevatedfamilylaw.com.
 - Services named: Web3Forms (form), AWS (hosting), Google Analytics, Jetpack stats, Google Fonts, Polylang language cookie.
 - "Attorney advertising" wording is optional in Colorado; included as a conservative choice.
