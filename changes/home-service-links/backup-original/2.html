@@ -1,0 +1,98 @@
+<!-- wp:group {"className":"efl-hero"} -->
+<div class="wp-block-group efl-hero"><!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">Compassionate Family Law Guidance in Northern Colorado</h1>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"className":"efl-lead"} -->
+<p class="efl-lead">Family legal matters are deeply personal. At Elevated Family Law, we provide clear, steady support to help you navigate challenging transitions and move forward with confidence.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button {"className":"wp-block-button__link efl-button"} -->
+<div class="wp-block-button wp-block-button__link efl-button"><a class="wp-block-button__link wp-element-button" href="/contact-us/">Request a Consultation</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div>
+<!-- /wp:group -->
+
+<!-- wp:heading {"style":{"typography":{"textAlign":"center"}}} -->
+<h2 class="wp-block-heading has-text-align-center">How We Can Help</h2>
+<!-- /wp:heading -->
+
+<!-- wp:group {"className":"efl-service-row efl-left"} -->
+<div class="wp-block-group efl-service-row efl-left"><!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Divorce &amp; Separation</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Guidance through every step of dissolution, from initial filings to property division and parenting plans.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"efl-service-row efl-right"} -->
+<div class="wp-block-group efl-service-row efl-right"><!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Child Custody &amp; Parenting Time</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Advocacy focused on the best interests of your children, including schedules and decision-making authority.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"efl-service-row efl-left"} -->
+<div class="wp-block-group efl-service-row efl-left"><!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Child &amp; Spousal Support</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Help understanding Colorado support guidelines and advocating for fair financial arrangements.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"efl-service-row efl-left"} -->
+<div class="wp-block-group efl-service-row efl-left"><!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Domestic Violence &amp; Protection Orders</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Compassionate, responsive assistance when safety is at stake, including emergency motions and protective orders.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"efl-service-row efl-right"} -->
+<div class="wp-block-group efl-service-row efl-right"><!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Settlement &amp; Mediation Support</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Helping you reach agreements outside the courtroom whenever possible, saving time, cost, and stress.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"efl-services-cta"} -->
+<div class="wp-block-group efl-services-cta"><!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button {"className":"wp-block-button__link efl-button"} -->
+<div class="wp-block-button wp-block-button__link efl-button"><a class="wp-block-button__link wp-element-button" href="/contact-us/">Schedule Your Consultation</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div>
+<!-- /wp:group -->
+
+<!-- wp:html -->
+<script>
+(function() {
+  var rows = document.querySelectorAll('.efl-service-row');
+  if (!('IntersectionObserver' in window)) {
+    rows.forEach(function(r){ r.classList.add('in-view'); });
+    return;
+  }
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
+  rows.forEach(function(row) { observer.observe(row); });
+})();
+</script>
+<!-- /wp:html -->

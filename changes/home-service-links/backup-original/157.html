@@ -1,0 +1,100 @@
+<!-- wp:group {"className":"efl-hero"} -->
+<div class="wp-block-group efl-hero"><!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">Orientación Compasiva en Derecho Familiar en el Norte de Colorado</h1>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"className":"efl-lead"} -->
+<p class="efl-lead">Los asuntos legales familiares son profundamente personales. En Elevated Family Law, le ofrecemos un apoyo claro y constante para ayudarle a superar momentos difíciles y avanzar con confianza.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button {"className":"wp-block-button__link efl-button"} -->
+<div class="wp-block-button wp-block-button__link efl-button"><a class="wp-block-button__link wp-element-button" href="/es/contactenos/">Solicite una Consulta</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div>
+<!-- /wp:group -->
+
+<!-- wp:heading {"style":{"typography":{"textAlign":"center"}}} -->
+<h2 class="wp-block-heading has-text-align-center">Cómo Podemos Ayudarle</h2>
+<!-- /wp:heading -->
+
+<!-- wp:group {"className":"efl-service-row efl-left"} -->
+<div class="wp-block-group efl-service-row efl-left"><!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Divorcio y Separación Legal</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Le acompañamos en cada paso de la disolución del matrimonio, desde la presentación inicial de documentos hasta la división de bienes y los planes de crianza.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"efl-service-row efl-right"} -->
+<div class="wp-block-group efl-service-row efl-right"><!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Custodia de Menores y Tiempo de Crianza</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Defensa centrada en el bienestar de sus hijos, incluyendo los horarios y la autoridad para la toma de decisiones.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"efl-service-row efl-left"} -->
+<div class="wp-block-group efl-service-row efl-left"><!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Manutención de Menores y Manutención Conyugal</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Ayuda para entender las pautas de manutención de Colorado y para defender acuerdos económicos justos.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"efl-service-row efl-left"} -->
+<div class="wp-block-group efl-service-row efl-left"><!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Violencia Doméstica y Órdenes de Protección</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Asistencia compasiva y oportuna cuando su seguridad está en riesgo, incluyendo mociones de emergencia y órdenes de protección.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"efl-service-row efl-right"} -->
+<div class="wp-block-group efl-service-row efl-right"><!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Apoyo en Acuerdos y Mediación</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Le ayudamos a llegar a acuerdos fuera de la corte siempre que sea posible, ahorrando tiempo, dinero y estrés.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"efl-services-cta"} -->
+<div class="wp-block-group efl-services-cta"><!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button {"className":"wp-block-button__link efl-button"} -->
+<div class="wp-block-button wp-block-button__link efl-button"><a class="wp-block-button__link wp-element-button" href="/es/contactenos/">Programe Su Consulta</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div>
+<!-- /wp:group -->
+
+<!-- wp:html -->
+<script>
+(function() {
+  var rows = document.querySelectorAll('.efl-service-row');
+  if (!('IntersectionObserver' in window)) {
+    rows.forEach(function(r){ r.classList.add('in-view'); });
+    return;
+  }
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
+  rows.forEach(function(row) { observer.observe(row); });
+})();
+</script>
+<!-- /wp:html -->
+
+
